@@ -5,8 +5,8 @@ include 'lib/Usuario.php';
 
 $oUsr = new Usuario();
 
-$oUsr->nombre='flopez';
-$oUsr->clave='1234';
+$oUsr->nombre=$_POST['nombre'];
+$oUsr->clave=$_POST['pass'];
 
 
 if($oUsr->VerificarUsuarioContrasenna())
