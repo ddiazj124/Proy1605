@@ -5,10 +5,11 @@ include 'lib/Usuario.php';
 
 $oUsr = new Usuario();
 
-$oUsr->nombre='nuevo';
+$oUsr->nombre='flopez';
+$oUsr->clave='1234';
 
 
-if($oUsr->VerificarUsuario())
+if($oUsr->VerificarUsuarioContrasenna())
 {
     echo 'Existe';
 }
