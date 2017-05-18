@@ -1,5 +1,5 @@
 <?php
-    $_SESSION["Saludo"]="Hola Mundo";
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +9,9 @@
         <title></title>
     </head>
     <body>
+        <?php
+            if(isset($_SESSION["Usuario"])) {
+        ?>
         <form method="post" action="Revision.php">
             <table>
                 <tr>
@@ -39,5 +42,9 @@
             </table>
             
         </form>
+                
+        <?php
+            }
+        ?>
     </body>
 </html>

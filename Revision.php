@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'lib/Conexion.php';
 include 'lib/Usuario.php';
 
@@ -11,7 +12,8 @@ $oUsr->clave=$_POST['pass'];
 
 if($oUsr->VerificarUsuarioContrasenna())
 {
-    echo 'Existe';
+    $_SESSION["Usuario"]=$oUsr;
+    header('location:http://localhost:8081/Proy1605/index.php');
 }
 else
 {
