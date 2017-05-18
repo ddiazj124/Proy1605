@@ -9,8 +9,17 @@ session_start();
         <title></title>
     </head>
     <body>
+        <div>
+            <?php
+                if(isset($_SESSION["Usuario"])){
+            ?>
+            <a href="Cerrar.php">Cerrar Sesion</a>
+            <?php
+                }
+            ?>
+        </div>
         <?php
-            if(isset($_SESSION["Usuario"])) {
+            if(!isset($_SESSION["Usuario"])) {
         ?>
         <form method="post" action="Revision.php">
             <table>
